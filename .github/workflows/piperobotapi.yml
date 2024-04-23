@@ -1,6 +1,6 @@
 name: Robot Framework Tests
  
-on: workflow_dispatcher
+on: push
  
 jobs:
   test:
