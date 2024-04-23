@@ -1,7 +1,6 @@
 name: Robot Framework Tests
  
-on: [push, pull_request]
-  workflow_dispatcher:
+on: workflow_dispatcher
  
 jobs:
   test:
