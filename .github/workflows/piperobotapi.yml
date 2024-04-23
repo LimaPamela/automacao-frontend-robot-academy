@@ -1,7 +1,8 @@
 name: Robot Framework Tests
  
-on: push
- 
+on: 
+  workflow_dispach
+
 jobs:
   test:
     runs-on: ubuntu-latest
