@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-22T15:31:01.563179" rpa="false" schemaversion="5">
+<suite id="s1" name="Login User" source="C:\Users\pamli\Desktop\Estudos-QA\Automação\automacao-frontend-robot-academy\tests\login_user.robot">
+<test id="s1-t1" name="CT4: Realizar cadastro de novo usuário" line="9">
+<kw name="Abrir o navegador" owner="CT1_login_admin_academy" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:02.672683" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-04-22T15:31:03.738737" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\pamli\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-22T15:31:02.672683" elapsed="3.929978"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-04-22T15:31:06.603167" elapsed="0.127582"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:02.671676" elapsed="4.059073"/>
+</kw>
+<kw name="Passo 1: Logar com admin" owner="CT4_register_new_user">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:06.732818" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br/login'</msg>
+<arg>${URLLogin}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-22T15:31:06.732818" elapsed="2.761107"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${emailInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:09.493925" elapsed="0.117140"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:09.612071" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'email'.</msg>
+<arg>${emailInput}</arg>
+<arg>${mailAdmin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:09.611065" elapsed="0.234098"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${senhaInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:09.845163" elapsed="0.022002"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:09.868180" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-04-22T15:31:09.892360" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${senhaInput}</arg>
+<arg>${passAdmin}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:09.867165" elapsed="0.097750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${entrarButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:09.964915" elapsed="0.026593"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:09.991508" level="INFO">Clicking button 'login'.</msg>
+<arg>${entrarButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:09.991508" elapsed="0.147543"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:06.731810" elapsed="3.407241"/>
+</kw>
+<kw name="Passo 2: Clicar no botão cadastros" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${cadastrosButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:10.141049" elapsed="0.904568"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:11.045617" level="INFO">Clicking element 'css=div#Cadastros'.</msg>
+<arg>${cadastrosButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.045617" elapsed="0.064172"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:10.140048" elapsed="0.969741"/>
+</kw>
+<kw name="Passo 3: Clicar em usuários" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${usuariosButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.111175" elapsed="0.025668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:11.137842" level="INFO">Clicking element 'css=div#Usuários'.</msg>
+<arg>${usuariosButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.136843" elapsed="0.073418"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:11.111175" elapsed="0.099086"/>
+</kw>
+<kw name="Passo 4: Clicar em novo cadastro" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${novoCadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.211260" elapsed="0.246591"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:11.458850" level="INFO">Clicking button 'Novo Cadastro'.</msg>
+<arg>${novoCadastro}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.457851" elapsed="0.113659"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:11.211260" elapsed="0.361250"/>
+</kw>
+<kw name="Passo 5: Prencer formulário com nome completo e email" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${fullnameInput}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.573510" elapsed="0.045782"/>
+</kw>
+<kw name="Name" owner="FakerLibrary">
+<msg time="2024-04-22T15:31:11.622722" level="INFO">${fullNameFaker} = Yago Duarte</msg>
+<var>${fullNameFaker}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2024-04-22T15:31:11.619292" elapsed="0.003430"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:11.623730" level="INFO">Typing text 'Yago Duarte' into text field 'fullName'.</msg>
+<arg>${fullnameInput}</arg>
+<arg>${fullNameFaker}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.622722" elapsed="0.332941"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${emailUser}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:11.955663" elapsed="0.103638"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-04-22T15:31:12.059301" level="INFO">${mailfaker} = yago duarte</msg>
+<var>${mailfaker}</var>
+<arg>${fullNameFaker}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.059301" elapsed="0.000000"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2024-04-22T15:31:12.060302" level="INFO">${mailfaker} = yagoduarte</msg>
+<var>${mailfaker}</var>
+<arg>${mailfaker}</arg>
+<arg>${SPACE}</arg>
+<arg>Srta Sra Sr Dr Dra</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.060302" elapsed="0.000000"/>
+</kw>
+<kw name="Remover Acentos" owner="strings_utils">
+<msg time="2024-04-22T15:31:12.061506" level="INFO">${mailfaker} = yagoduarte</msg>
+<var>${mailfaker}</var>
+<arg>${mailfaker}</arg>
+<status status="PASS" start="2024-04-22T15:31:12.060302" elapsed="0.001204"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:12.064524" level="INFO">Typing text 'yagoduarte@qacoders.com.br' into text field 'mail'.</msg>
+<arg>${emailUser}</arg>
+<arg>${mailfaker}@qacoders.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.062528" elapsed="0.361881"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:11.572510" elapsed="0.851899"/>
+</kw>
+<kw name="Passo 6: Prencer formulário perfil de acesso admin" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${perfilAcesso}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.436456" elapsed="0.074483"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:12.510939" level="INFO">Typing text 'ADMIN' into text field 'accessProfile'.</msg>
+<arg>${perfilAcesso}</arg>
+<arg>${pfAdmin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.510939" elapsed="0.229802"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:12.436456" elapsed="0.304285"/>
+</kw>
+<kw name="Passo 7: Prencer formulário com cpf" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${cpfUser}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.741772" elapsed="0.100768"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-04-22T15:31:12.843547" level="INFO">${CPF} = 03982345286</msg>
+<var>${CPF}</var>
+<arg>length=11</arg>
+<arg>chars=[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.842540" elapsed="0.001007"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:12.843547" level="INFO">Typing text '03982345286' into text field 'cpf'.</msg>
+<arg>${cpfUser}</arg>
+<arg>${CPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:12.843547" elapsed="0.229626"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:12.740741" elapsed="0.332432"/>
+</kw>
+<kw name="Passo 8: Prencer formulário com senha e confirmação de senha" owner="CT4_register_new_user">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordUser}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:13.074649" elapsed="0.034814"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirmPass}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-22T15:31:13.110460" elapsed="0.064517"/>
+</kw>
+<kw name="Password" owner="FakerLibrary">
+<msg time="2024-04-22T15:31:13.175975" level="INFO">${password} = 0jI*fYQ@$6</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2024-04-22T15:31:13.174977" elapsed="0.000998"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:13.175975" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-04-22T15:31:13.242162" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordUser}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:13.175975" elapsed="0.263475"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:13.439450" level="INFO">Typing password into text field 'confirmPassword'.</msg>
+<msg time="2024-04-22T15:31:13.505944" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${confirmPass}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T15:31:13.439450" elapsed="0.236266"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:13.073173" elapsed="0.602543"/>
+</kw>
+<kw name="Fechar o navegador" owner="CT1_login_admin_academy" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-22T15:31:14.113517" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-22T15:31:13.676816" elapsed="0.436701"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-22T15:31:14.114517" elapsed="6.816096"/>
+</kw>
+<status status="PASS" start="2024-04-22T15:31:13.676816" elapsed="7.253797"/>
+</kw>
+<tag>new_user</tag>
+<status status="PASS" start="2024-04-22T15:31:02.670325" elapsed="18.260288"/>
+</test>
+<status status="PASS" start="2024-04-22T15:31:01.566676" elapsed="19.366408"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">new_user</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login User">Login User</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-22T15:31:03.738737" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\pamli\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
